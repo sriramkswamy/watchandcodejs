@@ -5,7 +5,7 @@
   <link href="/watchandcodejs/atom.xml" rel="self"/>
   
   <link href="http://sriramkswamy.github.io/watchandcodejs/"/>
-  <updated>2016-08-17T22:03:05.000Z</updated>
+  <updated>2016-08-17T22:05:29.000Z</updated>
   <id>http://sriramkswamy.github.io/watchandcodejs/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://sriramkswamy.github.io/watchandcodejs/2016/08/17/Version-03/"/>
     <id>http://sriramkswamy.github.io/watchandcodejs/2016/08/17/Version-03/</id>
     <published>2016-08-17T21:42:22.000Z</published>
-    <updated>2016-08-17T22:03:05.000Z</updated>
+    <updated>2016-08-17T22:05:29.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>This version is going to be about objects. Objects can be thought of properties/details about something. For example, your laptop/computer might have an operating system, purchase year and screen size and these can be listed as below -</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">operatingSystem Mac</div><div class="line">purchaseYear 2011</div><div class="line">screenSize 15 inches</div></pre></td></tr></table></figure>
@@ -48,7 +48,7 @@
 <h2 id="Storing-TODOs-array-in-an-object"><a href="#Storing-TODOs-array-in-an-object" class="headerlink" title="Storing TODOs array in an object"></a>Storing TODOs array in an object</h2><p>Let’s recreate what we did in the previous steps but try to use objects this time.</p>
 <figure class="highlight plain"><figcaption><span>[storing the todos]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var todoList = &#123;</div><div class="line">    todos: [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;]</div><div class="line">&#125;;</div><div class="line"></div><div class="line">console.log(todoList);</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; &#123; todos: [ &apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos; ] &#125;</div></pre></td></tr></table></figure>
-<p>That’s it for storing todos. The important thing to remember here is that there is no semicolon (=;=) after the property is defined inside an object.</p>
+<p>That’s it for storing todos. The important thing to remember here is that there is no semicolon (<code>;</code>) after the property is defined inside an object.</p>
 <h3 id="Updated-requirements"><a href="#Updated-requirements" class="headerlink" title="Updated requirements"></a>Updated requirements</h3><ul>
 <li>[X] It should store the todos array in an object</li>
 <li>[ ] It should have a displayTodos method</li>
