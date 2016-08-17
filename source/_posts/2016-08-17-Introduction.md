@@ -18,8 +18,6 @@ The course follows Gordon Zhu as he teaches and creates a version of the [TodoMV
 
 It is strongly recommended that you go through the course and write/practice the code. This site contains all the code but is to be used as a reference/refresher for the course. This is *not* a substitute for the course. The blog is not written in the same flow as the courses, i.e., each blog post doesn't not correspond to one video. Instead, each blog post will correspond to one logical chunk of the course.
 
-I have also tried to add links to the actual videos whenever and wherever possible.
-
 The most important point is reading the code blocks. Every result of the code will start with `> ` symbol, which is the prompt for the [Node JS](https://nodejs.org/en/) REPL. All the code blocks are evaluated using the same Node JS REPL. So, there might be a few differences as to how it is seen on the Google Chrome console.
 
 ## About the course

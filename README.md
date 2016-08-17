@@ -6,6 +6,6 @@ This repository contains two branches - `master` and `gh-pages`. `master` branch
 
 ## Contributing
 
-If you feel there is only a minor error, [raise and issue](https://github.com/sriramkswamy/watchandcodejs/issues).
+If you feel there is only a minor error, [raise an issue](https://github.com/sriramkswamy/watchandcodejs/issues).
 
 To add content, fork the repo, follow the style in previous blog posts and submit a pull request. You must know how to Hexo, which is actually pretty easy, and also must have [Node JS REPL](https://nodejs.org/en/) installed. All the code blocks are evaluated in a Node REPL.
