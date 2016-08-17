@@ -1,0 +1,116 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Watch and Code JS
+subtitle: Practical Javascript
+description: Codes and notes based on the Practical Javascript course at Watch and Code by Gordon Zhu
+author: Sriram Krishnaswamy
+language: en
+timezone: America/New_York
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://sriramkswamy.github.io/watchandcodejs
+root: /watchandcodejs/
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :year-:month-:day-:title.md # File name of new posts
+default_layout: post
+titlecase: true # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: git@github.com:sriramkswamy/watchandcodejs
+  branch: [gh-pages]
+
+# RSS Feed
+## https://github.com/hexojs/hexo-generator-feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: typing
+
+# # Lang
+# language: en
+
+# # Header
+# menu:
+#   Home: /
+#   Archives: /archives
+#   About: /about
+# rss: /atom.xml
+
+# # Content
+# fancybox: true
+
+
+# # Miscellaneous
+# google_analytics:
+# favicon: /favicon.ico
+# twitter:
+# google_plus:
+# fb_admins:
+# fb_app_id:
+
+# # Profile
+# nickname: Sriram
+# description: This is a small blog/site to track the code and notes for the Practical JavaScript course by Gordon Zhu
+# links:
+#   Blog: /archives
+#   GitHub: https://github.com/sriramkswamy/watchandcodejs
+#   Facebook: https://www.facebook.com/groups/514043678767094/
+#   Twitter : https://twitter.com/gordon_zhu
+
+# # Info
+# archive_footer_content: Practical JavaScript
+# post_footer_content: Watch and Code by Gordon Zhu
