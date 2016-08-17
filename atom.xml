@@ -5,7 +5,7 @@
   <link href="/watchandcodejs/atom.xml" rel="self"/>
   
   <link href="http://sriramkswamy.github.io/watchandcodejs/"/>
-  <updated>2016-08-17T21:18:47.000Z</updated>
+  <updated>2016-08-17T21:36:26.000Z</updated>
   <id>http://sriramkswamy.github.io/watchandcodejs/</id>
   
   <author>
@@ -14,6 +14,98 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Version 02</title>
+    <link href="http://sriramkswamy.github.io/watchandcodejs/2016/08/17/Version-02/"/>
+    <id>http://sriramkswamy.github.io/watchandcodejs/2016/08/17/Version-02/</id>
+    <published>2016-08-17T21:20:27.000Z</published>
+    <updated>2016-08-17T21:36:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>This version is going to be all about functions.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Functions are like recipes. It can take long list of instructions and give you some result. To understand this better, let’s try to write down the steps to make a turkey sandwich and then convert that into a function.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">makeTurkeySandwich</div><div class="line">  Get one slice of bread.</div><div class="line">  Add turkey.</div><div class="line">  Put a slice of bread on top.</div></pre></td></tr></table></figure>
+<p>The first important thing while converting this in to a function is the use of the <code>function</code> keyword. That’s how JavaScript knows it’s a function. The basic structure is shown below.</p>
+<figure class="highlight plain"><figcaption><span>[english translated function]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function makeTurkeysandwich () &#123;</div><div class="line">    Get one slice of bread;</div><div class="line">    Add turkey;</div><div class="line">    Put a slice of bread on top;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Note the opening and closing braces after the instructions and the semicolon instead of period. Of course, this is not a valid JavaScript code. So, evaluating this will give lots of errors. This is just for illustration purposes. Finally, if you want to call this function (just like how you tell someone to make a turkey sandwich after you tell them the recipe), you should use the following style for it.</p>
+<figure class="highlight plain"><figcaption><span>[calling a function]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">makeTurkeySandwich()</div></pre></td></tr></table></figure>
+<p>This will also result in errors but the important point to note is the parenthesis present in both when we defined the function and when we call it. We can talk about this later.</p>
+<h2 id="Customizing-functions"><a href="#Customizing-functions" class="headerlink" title="Customizing functions"></a>Customizing functions</h2><p>The best situation to customize the recipe is when you need repetitive recipes. For example, making a turkey sandwich or a ham sandwich is pretty similar except for the filling. This is a good situation where we can tweak our recipe. Let’s write this new recipe.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">makeSandwichWith ________</div><div class="line">  Get one slice of bread.</div><div class="line">  Add ________.</div><div class="line">  Put a slice of bread on top.</div></pre></td></tr></table></figure>
+<p>This avoids a lot of repetitiveness and makes our recipe flexible. Let’s try to use a similar style for our function. Here, instead of the blank - <code>____</code> - we have variables.</p>
+<figure class="highlight plain"><figcaption><span>[function with argument]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function makeSandwichWith (filling) &#123;</div><div class="line">	Get one slice of bread;</div><div class="line">	Add filling;</div><div class="line">	Put a slice of bread on top;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This can be called by</p>
+<figure class="highlight plain"><figcaption><span>[calling a function with argument]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">makeSandwichWith(ham)</div></pre></td></tr></table></figure>
+<p>Now, this will create a recipe to make a ham sandwich. Note that, here when you write <code>ham</code>, you are implicitly telling that it’s a variable and when there is no such variable. However, if you want to insert the text “ham”, you need to do it within single quotes like so - <code>&#39;ham&#39;</code>.</p>
+<p>The “filling” in the function definition is called a function parameter and the ‘ham’ that we input while calling it is called the function argument.</p>
+<p>Note: Remember that we have used functions before. The ~console.log()~ is a function that takes multiple arguments.</p>
+<h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><p>All the requirements for version 2 are built around functions</p>
+<ul>
+<li>[ ] It should have a function to display TODOs</li>
+<li>[ ] It should have a function to add TODOs</li>
+<li>[ ] It should have a function to change TODOs</li>
+<li>[ ] It should have a function to delete TODOs</li>
+</ul>
+<h2 id="Displaying-TODOs-with-a-function"><a href="#Displaying-TODOs-with-a-function" class="headerlink" title="Displaying TODOs with a function"></a>Displaying TODOs with a function</h2><p>To make a function that displays TODOs, we need some data to work with. So, let’s create a variable just like we did in version 1.</p>
+<figure class="highlight plain"><figcaption><span>[display function]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var todos = [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;];</div><div class="line"></div><div class="line">function displayTodos() &#123;</div><div class="line">    console.log(&apos;My Todos: &apos;, todos);</div><div class="line">&#125;</div><div class="line"></div><div class="line">displayTodos();</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; My Todos:  [ &apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos; ]</div><div class="line">&gt; undefined</div></pre></td></tr></table></figure>
+<p>There are a couple of points to note here. The semicolon rules are a bit fuzzy. Therefore, until we use a tool that helps us with that, let’s forget about the rules of semicolon. Secondly, note that this function takes no argument but still displays the todo items. This is because the variable to display - <code>todos</code> - is hard coded into the function. If there is no variable called <code>todos</code> in our code, this will throw an error.</p>
+<h3 id="Updated-requirements"><a href="#Updated-requirements" class="headerlink" title="Updated requirements"></a>Updated requirements</h3><ul>
+<li>[X] It should have a function to display TODOs</li>
+<li>[ ] It should have a function to add TODOs</li>
+<li>[ ] It should have a function to change TODOs</li>
+<li>[ ] It should have a function to delete TODOs</li>
+</ul>
+<h2 id="Adding-TODOs-with-a-function"><a href="#Adding-TODOs-with-a-function" class="headerlink" title="Adding TODOs with a function"></a>Adding TODOs with a function</h2><p>This takes a new todo item and adds it to our <code>todos</code> variable. For a start, let’s add a standard new item - “new todo”.</p>
+<figure class="highlight plain"><figcaption><span>[function for adding a todo]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var todos = [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;];</div><div class="line"></div><div class="line">function displayTodos() &#123;</div><div class="line">    console.log(&apos;My Todos: &apos;, todos);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function addTodo() &#123;</div><div class="line">    todos.push(&apos;new todo&apos;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">addTodo();</div><div class="line"></div><div class="line">displayTodos();</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; My Todos:  [ &apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;, &apos;new todo&apos; ]</div><div class="line">&gt; undefined</div></pre></td></tr></table></figure>
+<p>Now this snippet of code, adds a standard text for todo, but that’s not what we want. We want to add a custom text and this means we have to have the function ~addTodos()~ take a parameter for input.</p>
+<figure class="highlight plain"><figcaption><span>[function for adding a todo with an argument]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var todos = [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;];</div><div class="line"></div><div class="line">function displayTodos() &#123;</div><div class="line">    console.log(&apos;My Todos: &apos;, todos);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function addTodo(todo) &#123;</div><div class="line">    todos.push(todo);</div><div class="line">    displayTodos();</div><div class="line">&#125;</div><div class="line"></div><div class="line">addTodo(&apos;hello there&apos;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; My Todos:  [ &apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;, &apos;hello there&apos; ]</div><div class="line">&gt; undefined</div></pre></td></tr></table></figure>
+<p>Note that when we use this version of <code>addTodo</code>, you need supply an argument which will customize it. Also, you can call a function inside another function like how we call <code>displayTodos</code> inside <code>addTodo</code>.</p>
+<h3 id="Updated-requirements-1"><a href="#Updated-requirements-1" class="headerlink" title="Updated requirements"></a>Updated requirements</h3><ul>
+<li>[X] It should have a function to display TODOs</li>
+<li>[X] It should have a function to add TODOs</li>
+<li>[ ] It should have a function to change TODOs</li>
+<li>[ ] It should have a function to delete TODOs</li>
+</ul>
+<h2 id="Changing-TODOs-with-a-function"><a href="#Changing-TODOs-with-a-function" class="headerlink" title="Changing TODOs with a function"></a>Changing TODOs with a function</h2><p>We would grab the variable of the todo item and change it. This strategy, however, will not work because we need flexibility.</p>
+<figure class="highlight plain"><figcaption><span>[function for changing a todo given position]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var todos = [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;];</div><div class="line"></div><div class="line">function displayTodos() &#123;</div><div class="line">    console.log(&apos;My Todos: &apos;, todos);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function addTodo(todo) &#123;</div><div class="line">    todos.push(todo);</div><div class="line">    displayTodos();</div><div class="line">&#125;</div><div class="line"></div><div class="line">function changeTodo(position, newValue) &#123;</div><div class="line">    todos[position] = newValue;</div><div class="line">    displayTodos();</div><div class="line">&#125;</div><div class="line"></div><div class="line">addTodo(&apos;hello there&apos;);</div><div class="line">changeTodo(0, &apos;changed&apos;)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; My Todos:  [ &apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;, &apos;hello there&apos; ]</div><div class="line">&gt; My Todos:  [ &apos;changed&apos;, &apos;item 2&apos;, &apos;item 3&apos;, &apos;hello there&apos; ]</div><div class="line">&gt; undefined</div></pre></td></tr></table></figure>
+<p>Here, the first parameter is the index of the item we want to change and the second is what the changed item should be.</p>
+<h3 id="Updated-requirements-2"><a href="#Updated-requirements-2" class="headerlink" title="Updated requirements"></a>Updated requirements</h3><ul>
+<li>[X] It should have a function to display TODOs</li>
+<li>[X] It should have a function to add TODOs</li>
+<li>[X] It should have a function to change TODOs</li>
+<li>[ ] It should have a function to delete TODOs</li>
+</ul>
+<h2 id="Deleting-TODOs-with-a-function"><a href="#Deleting-TODOs-with-a-function" class="headerlink" title="Deleting TODOs with a function"></a>Deleting TODOs with a function</h2><p>This is going to be pretty straightforward. We just take the position for the parameter and use the <code>splice</code> function. An important note here is that we are going to delete only one item per call of the function. So, the second argument of <code>splice</code> command is always going to be 1.</p>
+<figure class="highlight plain"><figcaption><span>[function for deleting a todo]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">var todos = [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;];</div><div class="line"></div><div class="line">function displayTodos() &#123;</div><div class="line">    console.log(&apos;My Todos: &apos;, todos);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function addTodo(todo) &#123;</div><div class="line">    todos.push(todo);</div><div class="line">    displayTodos();</div><div class="line">&#125;</div><div class="line"></div><div class="line">function changeTodo(position, newValue) &#123;</div><div class="line">    todos[position] = newValue;</div><div class="line">    displayTodos();</div><div class="line">&#125;</div><div class="line"></div><div class="line">function deleteTodo(position) &#123;</div><div class="line">    todos.splice(position, 1);</div><div class="line">    displayTodos();</div><div class="line">&#125;</div><div class="line"></div><div class="line">addTodo(&apos;hello there&apos;);</div><div class="line">changeTodo(0, &apos;changed&apos;);</div><div class="line">deleteTodo(1);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt; My Todos:  [ &apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;, &apos;hello there&apos; ]</div><div class="line">&gt; My Todos:  [ &apos;changed&apos;, &apos;item 2&apos;, &apos;item 3&apos;, &apos;hello there&apos; ]</div><div class="line">&gt; My Todos:  [ &apos;changed&apos;, &apos;item 3&apos;, &apos;hello there&apos; ]</div><div class="line">&gt; undefined</div></pre></td></tr></table></figure>
+<h3 id="Updated-requirements-3"><a href="#Updated-requirements-3" class="headerlink" title="Updated requirements"></a>Updated requirements</h3><ul>
+<li>[X] It should have a function to display TODOs</li>
+<li>[X] It should have a function to add TODOs</li>
+<li>[X] It should have a function to change TODOs</li>
+<li>[X] It should have a function to delete TODOs</li>
+</ul>
+<h2 id="Version-2-conclusions"><a href="#Version-2-conclusions" class="headerlink" title="Version 2 conclusions"></a>Version 2 conclusions</h2><p>Try to play around with all the functions with Chrome or any console. You can copy paste the code from the file <a href="https://github.com/sriramkswamy/watchandcodejs/blob/master/code/version02.js" target="_blank" rel="external">version02.js</a>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This version is going to be all about functions.&lt;/p&gt;
+&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction
+    
+    </summary>
+    
+      <category term="course" scheme="http://sriramkswamy.github.io/watchandcodejs/categories/course/"/>
+    
+    
+      <category term="functions" scheme="http://sriramkswamy.github.io/watchandcodejs/tags/functions/"/>
+    
+      <category term="chrome" scheme="http://sriramkswamy.github.io/watchandcodejs/tags/chrome/"/>
+    
+  </entry>
   
   <entry>
     <title>Version 01</title>
@@ -140,9 +232,9 @@
       <category term="course" scheme="http://sriramkswamy.github.io/watchandcodejs/categories/course/"/>
     
     
-      <category term="arrays" scheme="http://sriramkswamy.github.io/watchandcodejs/tags/arrays/"/>
-    
       <category term="chrome" scheme="http://sriramkswamy.github.io/watchandcodejs/tags/chrome/"/>
+    
+      <category term="arrays" scheme="http://sriramkswamy.github.io/watchandcodejs/tags/arrays/"/>
     
   </entry>
   
