@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Version 03 | Watch and Code JS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="IntroductionThis version is going to be about objects. Objects can be thought of properties/details about something. For example, your laptop/computer might have an operating system, purchase year and">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Version 03">
+<meta property="og:url" content="http://sriramkswamy.github.io/watchandcodejs/2016/08/17/Version-03/index.html">
+<meta property="og:site_name" content="Watch and Code JS">
+<meta property="og:description" content="IntroductionThis version is going to be about objects. Objects can be thought of properties/details about something. For example, your laptop/computer might have an operating system, purchase year and">
+<meta property="og:updated_time" content="2016-08-17T21:58:01.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Version 03">
+<meta name="twitter:description" content="IntroductionThis version is going to be about objects. Objects can be thought of properties/details about something. For example, your laptop/computer might have an operating system, purchase year and">
+  
+    <link rel="alternate" href="/atom.xml" title="Watch and Code JS" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/watchandcodejs/css/typing.css">
+</head>
+
+<body>
+  <div id="container" class="container">
+    <article id="post-Version-03" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Version 03
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>This version is going to be about objects. Objects can be thought of properties/details about something. For example, your laptop/computer might have an operating system, purchase year and screen size and these can be listed as below -</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">operatingSystem Mac</div><div class="line">purchaseYear 2011</div><div class="line">screenSize 15 inches</div></pre></td></tr></table></figure>
+<p>This example itself can be translated into JavaScript code like so -</p>
+<figure class="highlight plain"><figcaption><span>[translated object]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    operatingSystem: &apos;Mac&apos;,</div><div class="line">    screenSize: &apos;15 inches&apos;,</div><div class="line">    purchaseYear: 2011</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Note that 2011 is a number and hence can be left as such. We can assign this object to a variable.</p>
+<figure class="highlight plain"><figcaption><span>[assigning an object to a variable]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var myComputer = &#123;</div><div class="line">    operatingSystem: &apos;Mac&apos;,</div><div class="line">    screenSize: &apos;15 inches&apos;,</div><div class="line">    purchaseYear: 2011</div><div class="line">&#125;</div><div class="line"></div><div class="line">console.log(&quot;Complete Object: &quot;, myComputer);</div><div class="line">console.log(&quot;Operating system: &quot;, myComputer.operatingSystem);</div><div class="line">console.log(&quot;Screen Size: &quot;, myComputer.screenSize);</div><div class="line">console.log(&quot;Purchase year: &quot;, myComputer.purchaseYear);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt; Complete Object:  &#123; operatingSystem: &apos;Mac&apos;,</div><div class="line">&gt;   screenSize: &apos;15 inches&apos;,</div><div class="line">&gt;   purchaseYear: 2011 &#125;</div><div class="line">&gt; Operating system:  Mac</div><div class="line">&gt; Screen Size:  15 inches</div><div class="line">&gt; Purchase year:  2011</div></pre></td></tr></table></figure>
+<p>You use an object when you basically want to group some related data. When to use an array and an object? <a href="http://stackoverflow.com/questions/4441139/when-to-use-an-object-or-an-array-in-javascript" target="_blank" rel="external">Check out this question</a>.</p>
+<h2 id="Objects-and-functions"><a href="#Objects-and-functions" class="headerlink" title="Objects and functions"></a>Objects and functions</h2><p>Sometimes, we want the properties of the object to handle something slightly more complicated. The easiest way is by turning to functions. You can place a function in an object. Let’s consider the following object -</p>
+<figure class="highlight plain"><figcaption><span>[functions inside objects]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var gordon = &#123;</div><div class="line">    name: &apos;Gordon&apos;,</div><div class="line">    sayName: function() &#123;</div><div class="line">        console.log(this);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">console.log(gordon.sayName());</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; &#123; name: &apos;Gordon&apos;, sayName: [Function] &#125;</div></pre></td></tr></table></figure>
+<p>Note that we don’t give a name to this function inside an object because we can call it by the name of the property. Also, an important concept here is the <code>this</code> keyword. The <code>this</code> keyword is used by an object to refer itself. However, using just <code>this</code> in the ~console.log()~ prints out the entire object, which is not what we want. So let’s change it to display just a name.</p>
+<figure class="highlight plain"><figcaption><span>[refining this keyword based log]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var gordon = &#123;</div><div class="line">    name: &apos;Gordon&apos;,</div><div class="line">    sayName: function() &#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">console.log(gordon.sayName());</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; Gordon</div></pre></td></tr></table></figure>
+<p>This new ~console.log~ statement prints just the name. Now, for some terminologies. The kind of function written here, inside an object, is called a method and since it has no name, it is called an anonymous function. We call the anonymous function by its property.</p>
+<h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><p>All the requirements for version 3 are built around objects</p>
+<ul>
+<li>[ ] It should store the todos array in an object</li>
+<li>[ ] It should have a displayTodos method</li>
+<li>[ ] It should have a addTodo method</li>
+<li>[ ] It should have a changeTodo method</li>
+<li>[ ] It should have a deleteTodo method</li>
+</ul>
+<h2 id="Storing-TODOs-array-in-an-object"><a href="#Storing-TODOs-array-in-an-object" class="headerlink" title="Storing TODOs array in an object"></a>Storing TODOs array in an object</h2><p>Let’s recreate what we did in the previous steps but try to use objects this time.</p>
+<figure class="highlight plain"><figcaption><span>[storing the todos]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var todoList = &#123;</div><div class="line">    todos: [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;]</div><div class="line">&#125;;</div><div class="line"></div><div class="line">console.log(todoList);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; &#123; todos: [ &apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos; ] &#125;</div></pre></td></tr></table></figure>
+<p>That’s it for storing todos. The important thing to remember here is that there is no semicolon (=;=) after the property is defined inside an object.</p>
+<h3 id="Updated-requirements"><a href="#Updated-requirements" class="headerlink" title="Updated requirements"></a>Updated requirements</h3><ul>
+<li>[X] It should store the todos array in an object</li>
+<li>[ ] It should have a displayTodos method</li>
+<li>[ ] It should have a addTodo method</li>
+<li>[ ] It should have a changeTodo method</li>
+<li>[ ] It should have a deleteTodo method</li>
+</ul>
+<h2 id="Displaying-TODOs-with-an-object"><a href="#Displaying-TODOs-with-an-object" class="headerlink" title="Displaying TODOs with an object"></a>Displaying TODOs with an object</h2><p>If you remember from our <a href="https://sriramkswamy.github.io/watchandcodejs/2016/08/17/Version-02/">previous attempt</a>, we tried to display the todo items with the help of a function. Here, we try to create a function within this new object based on the example discussed previously.</p>
+<figure class="highlight plain"><figcaption><span>[creating a anonymous function to display todos]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var todoList = &#123;</div><div class="line">    todos: [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;],</div><div class="line">    displayTodos: function() &#123;</div><div class="line">        console.log(&apos;My Todos: &apos;, this.todos);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">console.log(todoList.displayTodos());</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; My Todos:  [ &apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos; ]</div></pre></td></tr></table></figure>
+<h3 id="Updated-requirements-1"><a href="#Updated-requirements-1" class="headerlink" title="Updated requirements"></a>Updated requirements</h3><ul>
+<li>[X] It should store the todos array in an object</li>
+<li>[X] It should have a displayTodos method</li>
+<li>[ ] It should have a addTodo method</li>
+<li>[ ] It should have a changeTodo method</li>
+<li>[ ] It should have a deleteTodo method</li>
+</ul>
+<h2 id="Adding-TODOs-with-an-object"><a href="#Adding-TODOs-with-an-object" class="headerlink" title="Adding TODOs with an object"></a>Adding TODOs with an object</h2><p>Just like the previous section, we take our <a href="https://sriramkswamy.github.io/watchandcodejs/2016/08/17/Version-02/">previously defined function</a> and fit it into the object.</p>
+<figure class="highlight plain"><figcaption><span>[creating a anonymous function to add todos]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var todoList = &#123;</div><div class="line">    todos: [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;],</div><div class="line">    displayTodos: function() &#123;</div><div class="line">        console.log(&apos;My Todos: &apos;, this.todos);</div><div class="line">    &#125;,</div><div class="line">    addTodo: function(todo) &#123;</div><div class="line">        this.todos.push(todo);</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">console.log(todoList.addTodo(&apos;plunker&apos;));</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; My Todos:  [ &apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;, &apos;plunker&apos; ]</div></pre></td></tr></table></figure>
+<h3 id="Updated-requirements-2"><a href="#Updated-requirements-2" class="headerlink" title="Updated requirements"></a>Updated requirements</h3><ul>
+<li>[X] It should store the todos array in an object</li>
+<li>[X] It should have a displayTodos method</li>
+<li>[X] It should have a addTodo method</li>
+<li>[ ] It should have a changeTodo method</li>
+<li>[ ] It should have a deleteTodo method</li>
+</ul>
+<h2 id="Changing-a-TODO-with-an-object"><a href="#Changing-a-TODO-with-an-object" class="headerlink" title="Changing a TODO with an object"></a>Changing a TODO with an object</h2><p>We are going to create an anonymous function for this new object based on our <a href="https://sriramkswamy.github.io/watchandcodejs/2016/08/17/Version-02/">previous function</a>.</p>
+<figure class="highlight plain"><figcaption><span>[creating an anonymous function to change todos based on position]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var todoList = &#123;</div><div class="line">    todos: [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;],</div><div class="line">    displayTodos: function() &#123;</div><div class="line">        console.log(&apos;My Todos: &apos;, this.todos);</div><div class="line">    &#125;,</div><div class="line">    addTodo: function(todo) &#123;</div><div class="line">        this.todos.push(todo);</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;,</div><div class="line">    changeTodo: function(position, newValue) &#123;</div><div class="line">        this.todos[position] = newValue;</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">console.log(todoList.changeTodo(0, &apos;first&apos;));</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; My Todos:  [ &apos;first&apos;, &apos;item 2&apos;, &apos;item 3&apos; ]</div></pre></td></tr></table></figure>
+<h3 id="Updated-requirements-3"><a href="#Updated-requirements-3" class="headerlink" title="Updated requirements"></a>Updated requirements</h3><ul>
+<li>[X] It should store the todos array in an object</li>
+<li>[X] It should have a displayTodos method</li>
+<li>[X] It should have a addTodo method</li>
+<li>[X] It should have a changeTodo method</li>
+<li>[ ] It should have a deleteTodo method</li>
+</ul>
+<h2 id="Deleting-a-TODO-with-an-object"><a href="#Deleting-a-TODO-with-an-object" class="headerlink" title="Deleting a TODO with an object"></a>Deleting a TODO with an object</h2><p>Hopefully, you are starting to see a pattern here. Let’s continue that by using our <a href="https://sriramkswamy.github.io/watchandcodejs/2016/08/17/Version-02/">deleteTodo function</a>.</p>
+<figure class="highlight plain"><figcaption><span>[creating an anonymous function to delete a todo]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var todoList = &#123;</div><div class="line">    todos: [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;],</div><div class="line">    displayTodos: function() &#123;</div><div class="line">        console.log(&apos;My Todos: &apos;, this.todos);</div><div class="line">    &#125;,</div><div class="line">    addTodo: function(todo) &#123;</div><div class="line">        this.todos.push(todo);</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;,</div><div class="line">    changeTodo: function(position, newValue) &#123;</div><div class="line">        this.todos[position] = newValue;</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;,</div><div class="line">    deleteTodo: function(position) &#123;</div><div class="line">        this.todos.splice(position, 1);</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">console.log(todoList.deleteTodo(1));</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; My Todos:  [ &apos;item 1&apos;, &apos;item 3&apos; ]</div></pre></td></tr></table></figure>
+<h3 id="Updated-requirements-4"><a href="#Updated-requirements-4" class="headerlink" title="Updated requirements"></a>Updated requirements</h3><ul>
+<li>[X] It should store the todos array in an object</li>
+<li>[X] It should have a displayTodos method</li>
+<li>[X] It should have a addTodo method</li>
+<li>[X] It should have a changeTodo method</li>
+<li>[X] It should have a deleteTodo method</li>
+</ul>
+<h2 id="Version-3-conclusions"><a href="#Version-3-conclusions" class="headerlink" title="Version 3 conclusions"></a>Version 3 conclusions</h2><p>We have met all the requirements and although the code is small, having everything in an object is useful for organization. The key takeaway from this version is the <code>this</code> keyword. The final version of this code can be found in <a href="https://github.com/sriramkswamy/watchandcodejs/blob/master/code/version03.js" target="_blank" rel="external">version03.js</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/watchandcodejs/2016/08/17/Version-03/" class="article-date">
+  <time datetime="2016-08-17T21:42:22.000Z" itemprop="datePublished">2016-08-17</time>
+</a>
+
+        </li>
+        
+          <li>
+            <span class="label">Category:</span>
+            
+  <div class="article-category">
+    <a class="article-category-link" href="/watchandcodejs/categories/course/">course</a>
+  </div>
+
+
+          </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/watchandcodejs/tags/chrome/">chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/watchandcodejs/tags/objects/">objects</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/watchandcodejs/tags/plunker/">plunker</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+  
+  
+    <a href="/watchandcodejs/2016/08/17/Version-02/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Version 02</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+  </div>
+  
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>Watch and Code by Gordon Zhu</p>
+
+
+      </div>
+    </footer>
+
+  
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/watchandcodejs/fancybox/jquery.fancybox.css">
+  <script src="/watchandcodejs/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/watchandcodejs/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
