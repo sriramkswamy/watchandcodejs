@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Watch and Code JS</title>
+  <subtitle>Practical Javascript</subtitle>
+  <link href="/watchandcodejs/atom.xml" rel="self"/>
+  
+  <link href="http://sriramkswamy.github.io/watchandcodejs/"/>
+  <updated>2016-08-17T19:31:37.000Z</updated>
+  <id>http://sriramkswamy.github.io/watchandcodejs/</id>
+  
+  <author>
+    <name>Sriram Krishnaswamy</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introduction</title>
+    <link href="http://sriramkswamy.github.io/watchandcodejs/2016/08/17/Introduction/"/>
+    <id>http://sriramkswamy.github.io/watchandcodejs/2016/08/17/Introduction/</id>
+    <published>2016-08-17T19:02:49.000Z</published>
+    <updated>2016-08-17T19:31:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://watchandcode.com" target="_blank" rel="external">Watch and Code</a> is a new set of courses on Javascript started by <a href="https://twitter.com/gordon_zhu" target="_blank" rel="external">Gordon Zhu</a> to help beginners comprehend Javascript.</p>
+<p>This blog follows the free course <a href="https://watchandcode.com/courses/practical-javascript" target="_blank" rel="external">Practical Javascript</a> which teaches the fundamentals of Javascript. For other courses, check out the courses under the <a href="http://watchandcode.com/courses" target="_blank" rel="external">premium</a> section.</p>
+<p>The course follows Gordon Zhu as he teaches and creates a version of the <a href="http://todomvc.com" target="_blank" rel="external">TodoMVC app</a> in vanilla Javascript.</p>
+<h2 id="How-to-use-this-blog"><a href="#How-to-use-this-blog" class="headerlink" title="How to use this blog"></a>How to use this blog</h2><p>It is strongly recommended that you go through the course and write/practice the code. This site contains all the code but is to be used as a reference/refresher for the course. This is <em>not</em> a substitute for the course. The blog is not written in the same flow as the courses, i.e., each blog post doesn’t not correspond to one video. Instead, each blog post will correspond to one logical chunk of the course.</p>
+<p>I have also tried to add links to the actual videos whenever and wherever possible.</p>
+<h2 id="About-the-course"><a href="#About-the-course" class="headerlink" title="About the course"></a>About the course</h2><p>These are a few links motivating and discussing the need for the course. If you haven’t taken the course yet, these videos might be a good place to start.</p>
+<p><a href="https://watchandcode.com/courses/practical-javascript/lectures/896960" target="_blank" rel="external">Why create this course?</a><br><a href="https://watchandcode.com/courses/practical-javascript/lectures/900443" target="_blank" rel="external">About Gordon Zhu</a><br><a href="https://watchandcode.com/courses/practical-javascript/lectures/900182" target="_blank" rel="external">Is this course right for you?</a><br><a href="https://watchandcode.com/courses/practical-javascript/lectures/900180" target="_blank" rel="external">What you will build?</a><br><a href="https://watchandcode.com/courses/practical-javascript/lectures/900177" target="_blank" rel="external">The development process</a></p>
+<h2 id="Support"><a href="#Support" class="headerlink" title="Support"></a>Support</h2><ul>
+<li>Gordon Zhu hosts live office hours and their schedule can be found in the <a href="https://www.facebook.com/groups/514043678767094/" target="_blank" rel="external">Facebook Group</a></li>
+<li>Of course, you can ask questions directly in the Facebook group</li>
+<li>Commenting on each video is also a good way to ask questions too</li>
+<li>If you are on a premium membership, there are Slack channels and email links</li>
+</ul>
+<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><ul>
+<li><a href="https://www.google.com/chrome/" target="_blank" rel="external">Google Chrome browser</a> for initial stages</li>
+<li><a href="http://plnkr.co" target="_blank" rel="external">Plunker</a> for later stages</li>
+</ul>
+<h2 id="About-this-blog"><a href="#About-this-blog" class="headerlink" title="About this blog"></a>About this blog</h2><p>This blog is generated with the help of a static site generator - <a href="https://hexo.io" target="_blank" rel="external">Hexo</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="external">GitHub pages</a>. It’s source can be found on <a href="https://github.com/sriramkswamy/watchandcodejs" target="_blank" rel="external">my GitHub repository</a>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://watchandcode.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Watch and Code&lt;/a&gt; is a new set of courses on Javascript started by &lt;a 
+    
+    </summary>
+    
+      <category term="meta" scheme="http://sriramkswamy.github.io/watchandcodejs/categories/meta/"/>
+    
+    
+      <category term="about" scheme="http://sriramkswamy.github.io/watchandcodejs/tags/about/"/>
+    
+      <category term="intro" scheme="http://sriramkswamy.github.io/watchandcodejs/tags/intro/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://sriramkswamy.github.io/watchandcodejs/2016/08/17/hello-world/"/>
+    <id>http://sriramkswamy.github.io/watchandcodejs/2016/08/17/hello-world/</id>
+    <published>2016-08-17T18:49:55.000Z</published>
+    <updated>2016-08-17T18:49:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
