@@ -20,6 +20,8 @@ It is strongly recommended that you go through the course and write/practice the
 
 I have also tried to add links to the actual videos whenever and wherever possible.
 
+The most important point is reading the code blocks. Every result of the code will start with `> ` symbol, which is the prompt for the [Node JS](https://nodejs.org/en/) REPL. All the code blocks are evaluated using the same Node JS REPL. So, there might be a few differences as to how it is seen on the Google Chrome console.
+
 ## About the course
 
 These are a few links motivating and discussing the need for the course. If you haven't taken the course yet, these videos might be a good place to start.
