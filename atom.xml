@@ -5,7 +5,7 @@
   <link href="/watchandcodejs/atom.xml" rel="self"/>
   
   <link href="http://sriramkswamy.github.io/watchandcodejs/"/>
-  <updated>2016-08-17T20:56:42.000Z</updated>
+  <updated>2016-08-17T21:18:47.000Z</updated>
   <id>http://sriramkswamy.github.io/watchandcodejs/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://sriramkswamy.github.io/watchandcodejs/2016/08/17/Version-01/"/>
     <id>http://sriramkswamy.github.io/watchandcodejs/2016/08/17/Version-01/</id>
     <published>2016-08-17T20:00:21.000Z</published>
-    <updated>2016-08-17T20:56:42.000Z</updated>
+    <updated>2016-08-17T21:18:47.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><ul>
 <li>[ ] It should have a place to store TODOs</li>
@@ -32,11 +32,11 @@
 <h2 id="Storing-TODOs"><a href="#Storing-TODOs" class="headerlink" title="Storing TODOs"></a>Storing TODOs</h2><p>To store TODOs, we use a JavaScript array. We would just write TODO items like a list -</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">item 1, item 2, item 3</div></pre></td></tr></table></figure>
 <p>The programming term for this kind of list is an array and a JavaScript array is given by -</p>
-<figure class="highlight plain"><figcaption><span>[array]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[creating an array]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;]</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; [ &apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos; ]</div></pre></td></tr></table></figure>
 <p>However, this way of creating arrays is ephemeral and we lose the information as soon as we issue the command. To make sure we have access to this again, we store it in a variable, i.e., assign a name or a tag to it which can be referred to later.</p>
 <p>The way to create a variable in JavaScript is -</p>
-<figure class="highlight plain"><figcaption><span>[variable]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var todos = [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[creating a variable]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var todos = [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;]</div></pre></td></tr></table></figure>
 <p>This results in the following at the REPL.</p>
 <figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; undefined</div></pre></td></tr></table></figure>
 <p>The <code>var</code> is the syntax for variable and the <code>todos</code> is the name of the variable. Notice that if you evaluate this, you will get <code>undefined</code> but that’s OK. Now, if you just type <code>todos</code> in a console, you should get the actual variable -</p>
@@ -127,7 +127,7 @@
 <li>We learned how to delete any item in an array using the <code>splice</code> command</li>
 </ul>
 <p>In this section we saw how to do a basic version 1 of this app. There are a lot more to arrays but these concepts gives enough knowledge to create the second version of the app.</p>
-<p>Try to play around with all the functions with Chrome or any console. You can copy paste the code from the file [[./versions/v01.js][v01.js]].</p>
+<p>Try to play around with all the functions with Chrome or any console. You can copy paste the code from the file <a href="https://github.com/sriramkswamy/watchandcodejs/blob/master/code/version01.js" target="_blank" rel="external">version01.js</a>.</p>
 ]]></content>
     
     <summary type="html">
