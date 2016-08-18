@@ -1,44 +1,44 @@
 // version 03
 var todoList = {
-    todos: ['item 1', 'item 2', 'item 3'],
-    displayTodos: function() {
-        console.log('My Todos: ', this.todos);
-    },
-    addTodo: function(todo) {
-        this.todos.push(todo);
-        this.displayTodos();
-    },
-    changeTodo: function(position, newValue) {
-        this.todos[position] = newValue;
-        this.displayTodos();
-    },
-    deleteTodo: function(position) {
-        this.todos.splice(position, 1);
-        this.displayTodos();
-    }
+  todos: ['item 1', 'item 2', 'item 3'],
+  displayTodos: function() {
+    console.log('My Todos: ', this.todos);
+  },
+  addTodo: function(todo) {
+    this.todos.push(todo);
+    this.displayTodos();
+  },
+  changeTodo: function(position, newValue) {
+    this.todos[position] = newValue;
+    this.displayTodos();
+  },
+  deleteTodo: function(position) {
+    this.todos.splice(position, 1);
+    this.displayTodos();
+  }
 };
 
 // adding a todo object
 var todoList = {
-    todos: [],
-    displayTodos: function() {
-        console.log('My Todos: ', this.todos);
-    },
-    addTodo: function(todoText) {
-        this.todos.push({
-            todoText: todoText,
-            completed: false
-        });
-        this.displayTodos();
-    },
-    changeTodo: function(position, newValue) {
-        this.todos[position] = newValue;
-        this.displayTodos();
-    },
-    deleteTodo: function(position) {
-        this.todos.splice(position, 1);
-        this.displayTodos();
-    }
+  todos: [],
+  displayTodos: function() {
+    console.log('My Todos: ', this.todos);
+  },
+  addTodo: function(todoText) {
+    this.todos.push({
+      todoText: todoText,
+      completed: false
+    });
+    this.displayTodos();
+  },
+  changeTodo: function(position, newValue) {
+    this.todos[position] = newValue;
+    this.displayTodos();
+  },
+  deleteTodo: function(position) {
+    this.todos.splice(position, 1);
+    this.displayTodos();
+  }
 };
 
 // calling addTodo
@@ -46,26 +46,26 @@ todoList.addTodo('hi')
 
 // changing a todo object
 var todoList = {
-    todos: [],
-    displayTodos: function() {
-        console.log('My Todos: ', this.todos);
-    },
-    addTodo: function(todoText) {
-        this.todos.push({
-            todoText: todoText,
-            completed: false
-        });
-        this.displayTodos();
-    },
-    changeTodo: function(position, todoText) {
-        // this.todos[position] = newValue; // this will no longer work
-		this.todos[position].todoText = todoText;
-        this.displayTodos();
-    },
-    deleteTodo: function(position) {
-        this.todos.splice(position, 1);
-        this.displayTodos();
-    }
+  todos: [],
+  displayTodos: function() {
+    console.log('My Todos: ', this.todos);
+  },
+  addTodo: function(todoText) {
+    this.todos.push({
+      todoText: todoText,
+      completed: false
+    });
+    this.displayTodos();
+  },
+  changeTodo: function(position, todoText) {
+    // this.todos[position] = newValue; // this will no longer work
+    this.todos[position].todoText = todoText;
+    this.displayTodos();
+  },
+  deleteTodo: function(position) {
+    this.todos.splice(position, 1);
+    this.displayTodos();
+  }
 };
 
 // calling changeTodo
@@ -84,31 +84,31 @@ newBoolean = !newBoolean;
 
 // changing the completed state a todo object
 var todoList = {
-    todos: [],
-    displayTodos: function() {
-        console.log('My Todos: ', this.todos);
-    },
-    addTodo: function(todoText) {
-        this.todos.push({
-            todoText: todoText,
-            completed: false
-        });
-        this.displayTodos();
-    },
-    changeTodo: function(position, todoText) {
-        // this.todos[position] = newValue; // this will no longer work
-        this.todos[position].todoText = todoText;
-        this.displayTodos();
-    },
-    deleteTodo: function(position) {
-        this.todos.splice(position, 1);
-        this.displayTodos();
-    },
-    toggleCompleted: function(position) {
-        var todo = this.todos[position]; // to reduce typing
-        todo.completed = !todo.completed;
-		this.displayTodos();
-    }
+  todos: [],
+  displayTodos: function() {
+    console.log('My Todos: ', this.todos);
+  },
+  addTodo: function(todoText) {
+    this.todos.push({
+      todoText: todoText,
+      completed: false
+    });
+    this.displayTodos();
+  },
+  changeTodo: function(position, todoText) {
+    // this.todos[position] = newValue; // this will no longer work
+    this.todos[position].todoText = todoText;
+    this.displayTodos();
+  },
+  deleteTodo: function(position) {
+    this.todos.splice(position, 1);
+    this.displayTodos();
+  },
+  toggleCompleted: function(position) {
+    var todo = this.todos[position]; // to reduce typing
+    todo.completed = !todo.completed;
+    this.displayTodos();
+  }
 };
 
 // toggle completed state
