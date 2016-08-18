@@ -10,7 +10,7 @@ var myComputer = {
   operatingSystem: 'Mac',
   screenSize: '15 inches',
   purchaseYear: 2011
-}
+};
 
 console.log("Complete Object: ", myComputer);
 console.log("Operating system: ", myComputer.operatingSystem);
@@ -23,7 +23,7 @@ var gordon = {
   sayName: function() {
     console.log(this);
   }
-}
+};
 
 console.log(gordon.sayName());
 
@@ -33,7 +33,7 @@ var gordon = {
   sayName: function() {
     console.log(this.name);
   }
-}
+};
 
 console.log(gordon.sayName());
 

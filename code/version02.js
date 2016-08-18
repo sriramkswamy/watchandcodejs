@@ -68,7 +68,7 @@ function changeTodo(position, newValue) {
 }
 
 addTodo('hello there');
-changeTodo(0, 'changed')
+changeTodo(0, 'changed');
 
 // function for deleting a todo
 var todos = ['item 1', 'item 2', 'item 3'];
