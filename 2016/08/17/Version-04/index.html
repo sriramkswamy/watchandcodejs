@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Version 04 | Watch and Code JS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Requirements
+[ ] todoList.addTodo should add objects
+[ ] todoList.changeTodo should change the todo Text property
+[ ] todoList.toggleCompleted should change the completed property
+
+IntroductionWe are">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Version 04">
+<meta property="og:url" content="http://sriramkswamy.github.io/watchandcodejs/2016/08/17/Version-04/index.html">
+<meta property="og:site_name" content="Watch and Code JS">
+<meta property="og:description" content="Requirements
+[ ] todoList.addTodo should add objects
+[ ] todoList.changeTodo should change the todo Text property
+[ ] todoList.toggleCompleted should change the completed property
+
+IntroductionWe are">
+<meta property="og:updated_time" content="2016-08-18T04:19:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Version 04">
+<meta name="twitter:description" content="Requirements
+[ ] todoList.addTodo should add objects
+[ ] todoList.changeTodo should change the todo Text property
+[ ] todoList.toggleCompleted should change the completed property
+
+IntroductionWe are">
+  
+    <link rel="alternate" href="/atom.xml" title="Watch and Code JS" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/watchandcodejs/css/typing.css">
+</head>
+
+<body>
+  <div id="container" class="container">
+    <article id="post-Version-04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Version 04
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><ul>
+<li>[ ] todoList.addTodo should add objects</li>
+<li>[ ] todoList.changeTodo should change the todo Text property</li>
+<li>[ ] todoList.toggleCompleted should change the completed property</li>
+</ul>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>We are going to start working with Booleans and our todo array is now going to become an object. Boolean essentially toggles between a <code>true</code> or a <code>false</code>. With that in mind, let’s map out the requirements.</p>
+<p>We base this version off of our <a href="https://sriramkswamy.github.io/watchandcodejs/2016/08/17/Version-03/">previous version</a> which is indicated below.</p>
+<figure class="highlight plain"><figcaption><span>[version 03]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var todoList = &#123;</div><div class="line">    todos: [&apos;item 1&apos;, &apos;item 2&apos;, &apos;item 3&apos;],</div><div class="line">    displayTodos: function() &#123;</div><div class="line">        console.log(&apos;My Todos: &apos;, this.todos);</div><div class="line">    &#125;,</div><div class="line">    addTodo: function(todo) &#123;</div><div class="line">        this.todos.push(todo);</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;,</div><div class="line">    changeTodo: function(position, newValue) &#123;</div><div class="line">        this.todos[position] = newValue;</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;,</div><div class="line">    deleteTodo: function(position) &#123;</div><div class="line">        this.todos.splice(position, 1);</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>Let’s first map out what properties we want to add -</p>
+<figure class="highlight plain"><figcaption><span>[new properties for object]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    todoText: &apos;item 1&apos;,</div><div class="line">    completed: false // Boolean true or false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Adding-a-TODO-object"><a href="#Adding-a-TODO-object" class="headerlink" title="Adding a TODO object"></a>Adding a TODO object</h2><p>Let’s change our existing code to reflect the idea discussed in the previous section.</p>
+<figure class="highlight plain"><figcaption><span>[adding a todo object]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">var todoList = &#123;</div><div class="line">    todos: [],</div><div class="line">    displayTodos: function() &#123;</div><div class="line">        console.log(&apos;My Todos: &apos;, this.todos);</div><div class="line">    &#125;,</div><div class="line">    addTodo: function(todoText) &#123;</div><div class="line">        this.todos.push(&#123;</div><div class="line">            todoText: todoText,</div><div class="line">            completed: false</div><div class="line">        &#125;);</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;,</div><div class="line">    changeTodo: function(position, newValue) &#123;</div><div class="line">        this.todos[position] = newValue;</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;,</div><div class="line">    deleteTodo: function(position) &#123;</div><div class="line">        this.todos.splice(position, 1);</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>Note that line number 9 - <code>todoText: todoText,</code> - can be confusing. The left <code>todoText</code> is going to remain <code>todoText</code> no matter what happens as it is the text property but the right <code>todoText</code> is referring to the parameter and might change based on the argument you supply. For example, if you call <code>todoList.addTodo(&#39;hi&#39;)</code>, then the right hand <code>todoText</code> is going to be <code>&#39;hi&#39;</code>.</p>
+<p>Now, let’s try calling it.</p>
+<figure class="highlight plain"><figcaption><span>[calling addTodo]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">todoList.addTodo(&apos;hi&apos;)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; My Todos:  [ &#123; todoText: &apos;hi&apos;, completed: false &#125; ]</div></pre></td></tr></table></figure>
+<p>Note that after changing our <code>addTodo</code> function, our <code>displayTodos</code> function acts weird. We can fix that later.</p>
+<h3 id="Updated-requirements"><a href="#Updated-requirements" class="headerlink" title="Updated requirements"></a>Updated requirements</h3><ul>
+<li>[X] todoList.addTodo should add objects</li>
+<li>[ ] todoList.changeTodo should change the todo Text property</li>
+<li>[ ] todoList.toggleCompleted should change the completed property</li>
+</ul>
+<h2 id="Changing-a-TODO"><a href="#Changing-a-TODO" class="headerlink" title="Changing a TODO"></a>Changing a TODO</h2><p>Following a similar logic as the previous section, we end up with this piece of code. While we are at it, let’s also go ahead and change the variable <code>newValue</code> to <code>todoText</code> as it’s more descriptive.</p>
+<figure class="highlight plain"><figcaption><span>[changing a todo object]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">var todoList = &#123;</div><div class="line">    todos: [],</div><div class="line">    displayTodos: function() &#123;</div><div class="line">        console.log(&apos;My Todos: &apos;, this.todos);</div><div class="line">    &#125;,</div><div class="line">    addTodo: function(todoText) &#123;</div><div class="line">        this.todos.push(&#123;</div><div class="line">            todoText: todoText,</div><div class="line">            completed: false</div><div class="line">        &#125;);</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;,</div><div class="line">    changeTodo: function(position, todoText) &#123;</div><div class="line">        // this.todos[position] = newValue; // this will no longer work</div><div class="line">		this.todos[position].todoText = todoText;</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;,</div><div class="line">    deleteTodo: function(position) &#123;</div><div class="line">        this.todos.splice(position, 1);</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>Let’s now try calling this function.</p>
+<figure class="highlight plain"><figcaption><span>[calling changeTodo]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">todoList.addTodo(&apos;hi&apos;);</div><div class="line">todoList.changeTodo(0, &apos;bye&apos;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; My Todos:  [ &#123; todoText: &apos;hi&apos;, completed: false &#125; ]</div><div class="line">&gt; My Todos:  [ &#123; todoText: &apos;bye&apos;, completed: false &#125; ]</div></pre></td></tr></table></figure>
+<h3 id="Updated-requirements-1"><a href="#Updated-requirements-1" class="headerlink" title="Updated requirements"></a>Updated requirements</h3><ul>
+<li>[X] todoList.addTodo should add objects</li>
+<li>[X] todoList.changeTodo should change the todo Text property</li>
+<li>[ ] todoList.toggleCompleted should change the completed property</li>
+</ul>
+<h2 id="The-bang-operator"><a href="#The-bang-operator" class="headerlink" title="The bang operator"></a>The bang operator</h2><p>Before going to write code, let’s check out the <code>!</code> operator.</p>
+<figure class="highlight plain"><figcaption><span>[bang false]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">!false;</div><div class="line">var myBoolean = true;</div><div class="line">!myBoolean;</div></pre></td></tr></table></figure>
+<p>Note that the undefined in the result is for evaluating the <code>var</code> variable declaration.</p>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; true</div><div class="line">&gt; undefined</div><div class="line">&gt; false</div></pre></td></tr></table></figure>
+<p>Another interesting way to use the bang operator is to set the variable to the opposite of its value.</p>
+<figure class="highlight plain"><figcaption><span>[switch original variable value]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var newBoolean = true;</div><div class="line">console.log(newBoolean);</div><div class="line">newBoolean = !newBoolean;</div></pre></td></tr></table></figure>
+<p>Note that the undefined in the result is for evaluating the <code>var</code> variable declaration.</p>
+<figure class="highlight plain"><figcaption><span>[results]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; undefined</div><div class="line">&gt; true</div><div class="line">&gt; false</div></pre></td></tr></table></figure>
+<h2 id="Toggle-the-completed-state-of-the-TODO"><a href="#Toggle-the-completed-state-of-the-TODO" class="headerlink" title="Toggle the completed state of the TODO"></a>Toggle the completed state of the TODO</h2><p>From the concepts discussed in our previous sections, we get -</p>
+<figure class="highlight plain"><figcaption><span>[changing the completed state a todo object]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">var todoList = &#123;</div><div class="line">    todos: [],</div><div class="line">    displayTodos: function() &#123;</div><div class="line">        console.log(&apos;My Todos: &apos;, this.todos);</div><div class="line">    &#125;,</div><div class="line">    addTodo: function(todoText) &#123;</div><div class="line">        this.todos.push(&#123;</div><div class="line">            todoText: todoText,</div><div class="line">            completed: false</div><div class="line">        &#125;);</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;,</div><div class="line">    changeTodo: function(position, todoText) &#123;</div><div class="line">        // this.todos[position] = newValue; // this will no longer work</div><div class="line">        this.todos[position].todoText = todoText;</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;,</div><div class="line">    deleteTodo: function(position) &#123;</div><div class="line">        this.todos.splice(position, 1);</div><div class="line">        this.displayTodos();</div><div class="line">    &#125;,</div><div class="line">    toggleCompleted: function(position) &#123;</div><div class="line">        var todo = this.todos[position]; // to reduce typing</div><div class="line">        todo.completed = !todo.completed;</div><div class="line">		this.displayTodos();</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>Let’s test it in the console.</p>
+<figure class="highlight plain"><figcaption><span>[toggle completed state]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">todoList.addTodo(&apos;boolean testing&apos;);</div><div class="line">todoList.toggleCompleted(0);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>[result]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; My Todos:  [ &#123; todoText: &apos;boolean testing&apos;, completed: false &#125; ]</div><div class="line">&gt; My Todos:  [ &#123; todoText: &apos;boolean testing&apos;, completed: true &#125; ]</div></pre></td></tr></table></figure>
+<h3 id="Updated-requirements-2"><a href="#Updated-requirements-2" class="headerlink" title="Updated requirements"></a>Updated requirements</h3><ul>
+<li>[X] todoList.addTodo should add objects</li>
+<li>[X] todoList.changeTodo should change the todo Text property</li>
+<li>[X] todoList.toggleCompleted should change the completed property</li>
+</ul>
+<h2 id="Version-4-conclusions"><a href="#Version-4-conclusions" class="headerlink" title="Version 4 conclusions"></a>Version 4 conclusions</h2><p>In this version, we changed our app to use objects instead of arrays with the help of booleans. As usual, the complete code version of this can be found in <a href="https://github.com/sriramkswamy/watchandcodejs/blob/master/code/version04.js" target="_blank" rel="external">version04.js</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/watchandcodejs/2016/08/17/Version-04/" class="article-date">
+  <time datetime="2016-08-18T03:19:51.000Z" itemprop="datePublished">2016-08-17</time>
+</a>
+
+        </li>
+        
+          <li>
+            <span class="label">Category:</span>
+            
+  <div class="article-category">
+    <a class="article-category-link" href="/watchandcodejs/categories/course/">course</a>
+  </div>
+
+
+          </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/watchandcodejs/tags/boolean/">boolean</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/watchandcodejs/tags/plunker/">plunker</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+  
+  
+    <a href="/watchandcodejs/2016/08/17/Version-03/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Version 03</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+  </div>
+  
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>Watch and Code by Gordon Zhu</p>
+
+
+      </div>
+    </footer>
+
+  
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/watchandcodejs/fancybox/jquery.fancybox.css">
+  <script src="/watchandcodejs/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/watchandcodejs/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
