@@ -42,7 +42,7 @@ var todoList = {
 };
 
 // calling addTodo
-todoList.addTodo('hi')
+todoList.addTodo('hi');
 
 // changing a todo object
 var todoList = {
