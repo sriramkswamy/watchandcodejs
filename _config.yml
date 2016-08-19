@@ -80,6 +80,10 @@ feed:
 ## Themes: https://hexo.io/themes/
 theme: typing
 
+# _config.yml to be put in the typing folder.
+# To get typing theme, go to the root directory (watchandcodejs) and clone the
+# repo like so - git clone https://github.com/geekplux/hexo-theme-typing themes/typing
+
 # # Lang
 # language: en
 
@@ -87,7 +91,7 @@ theme: typing
 # menu:
 #   Home: /
 #   Archives: /archives
-#   About: /about
+#   About: /about.html
 # rss: /atom.xml
 
 # # Content
@@ -103,14 +107,14 @@ theme: typing
 # fb_app_id:
 
 # # Profile
-# nickname: Sriram
-# description: This is a small blog/site to track the code and notes for the Practical JavaScript course by Gordon Zhu
+# nickname: Practical Javascript
+# description: This is a small blog/site to track the code and notes for the Practical Javascript course by Gordon Zhu
 # links:
-#   Blog: /archives
+#   Blog: /watchandcodejs/archives
 #   GitHub: https://github.com/sriramkswamy/watchandcodejs
 #   Facebook: https://www.facebook.com/groups/514043678767094/
 #   Twitter : https://twitter.com/gordon_zhu
 
 # # Info
-# archive_footer_content: Practical JavaScript
+# archive_footer_content: Practical Javascript
 # post_footer_content: Watch and Code by Gordon Zhu
